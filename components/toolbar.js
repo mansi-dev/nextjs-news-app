@@ -20,7 +20,7 @@ export const Toolbar = () => {
                 <div onClick={()=>router.push('/feed/1')}>General</div>
                 <div onClick={()=>router.push('/business-feed/1')}>Business</div>
                 <div onClick={()=>router.push('/entertainment-feed/1')}>Entertainment</div>
-                <div onClick={()=>router.push('/eom')}>Health</div>
+                <div onClick={()=>router.push('/health-feed/1')}>Health</div>
                 <div onClick={()=>router.push('/eom')}>Science</div>
                 <div onClick={()=>router.push('/eom')}>Sports</div>
                 <div onClick={()=>router.push('/eom')}>Technology</div>
