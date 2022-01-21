@@ -19,7 +19,8 @@ export const ScienceFeed = ({pageNumber, articles}) => {
                     <p className={styles.sourceName}>{article.title.split(' - ')[1]}</p>
                     <p className={styles.desc}>{article.description}</p>
                     {!!article.urlToImage && <img src={article.urlToImage}/>}
-                    <p className={styles.author}> - {article.author}</p>
+                    {!!article.author && <p className={styles.author}> - {article.author}</p> }
+
                 </div>
             ))
 
