@@ -9,16 +9,16 @@ export const Toolbar = () => {
         <div>
         <Clock
           format={'dddd, MMMM DD, YYYY, h:mm:ss A'} className={styles.clock}/>
-            <ul className={styles.parentList}>
+            {/* <ul className={styles.parentList}>
                 <li className={styles.item}><a href='#' className={styles.countryLink}>U.S.</a></li>
                 <li className={styles.item}><a href='#' className={styles.countryLink}>Canada</a></li>
                 <li className={styles.item}><a href='#' className={styles.countryLink}>India</a></li>
-            </ul>
+            </ul> */}
             <h4 className={styles.title}>THE NEWS POINT</h4>
             <div className={styles.main}>
                 <div onClick={()=>router.push('/')}>Home</div>
                 <div onClick={()=>router.push('/feed/1')}>General</div>
-                <div onClick={()=>router.push('/eom')}>Business</div>
+                <div onClick={()=>router.push('/business-feed/1')}>Business</div>
                 <div onClick={()=>router.push('/eom')}>Entertainment</div>
                 <div onClick={()=>router.push('/eom')}>Health</div>
                 <div onClick={()=>router.push('/eom')}>Science</div>
