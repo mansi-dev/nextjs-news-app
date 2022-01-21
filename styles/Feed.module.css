@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Noticia+Text&display=swap');
+
+.main{
+    display: flex;
+    margin-top: 50px;
+    
+    justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.main > div:nth-child(odd) {
+    width: 50%;
+    }
+  .main > div:nth-child(even) {
+    width: 30%;
+    }
+ 
+.post {
+    width: 500px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #000;
+    height: max-content;
+   
+}
+.post img {
+    width: 100%;
+}
+.post h1{
+    font-family: 'Lora', serif;
+    cursor: pointer;
+    text-align: center;
+}
+.desc{
+    font-family: 'Noticia Text', serif;
+}
+.author{
+    font-family: 'Noticia Text', serif;
+    text-align: right;
+    font-weight: bold;
+font-style: italic;
+color: #7B7B7C;
+}
+.sourceName{
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    font-weight: bold;
+color: #484849;
+}
+.paginator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.paginator div {
+    margin: 25px;
+}
+.paginator .disabled {
+    cursor: not-allowed;
+    color: rgb(179, 179, 179);
+}
