@@ -21,9 +21,9 @@ export const Toolbar = () => {
                 <div onClick={()=>router.push('/business-feed/1')}>Business</div>
                 <div onClick={()=>router.push('/entertainment-feed/1')}>Entertainment</div>
                 <div onClick={()=>router.push('/health-feed/1')}>Health</div>
-                <div onClick={()=>router.push('/eom')}>Science</div>
-                <div onClick={()=>router.push('/eom')}>Sports</div>
-                <div onClick={()=>router.push('/eom')}>Technology</div>
+                <div onClick={()=>router.push('/science-feed/1')}>Science</div>
+                <div onClick={()=>router.push('/sports-feed/1')}>Sports</div>
+                <div onClick={()=>router.push('/tech-feed/1')}>Technology</div>
             </div>
             <div className={styles.borderDiv}></div>
         </div>
