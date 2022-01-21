@@ -2,7 +2,9 @@ import styles from '../../styles/Feed.module.css';
 import {useRouter} from 'next/router';
 import { Toolbar } from '../../components/toolbar';
 
-export const Feed = ({ pageNumber, articles }) => {
+
+export const EntertainmentFeed = ({pageNumber, articles}) => {
+    console.log("-------------------------------------------")
     console.log(articles);
     console.log(pageNumber);
     const router = useRouter();
@@ -27,7 +29,7 @@ export const Feed = ({ pageNumber, articles }) => {
             <div 
             onClick={() => {
                 if(pageNumber > 1){
-                    router.push(`/feed/${pageNumber - 1}`).then(() => window.scrollTo(0,0));
+                    router.push(`/entertainment-feed/${pageNumber - 1}`).then(() => window.scrollTo(0,0));
                 }
             }}
             className={pageNumber === 1 ? styles.disabled : styles.active}>
@@ -37,7 +39,7 @@ export const Feed = ({ pageNumber, articles }) => {
             <div 
             onClick={() => {
                 if(pageNumber < 5){
-                    router.push(`/feed/${pageNumber + 1}`).then(() => window.scrollTo(0,0));
+                    router.push(`/entertainment-feed/${pageNumber + 1}`).then(() => window.scrollTo(0,0));
                 }
             }}
             className={pageNumber === 5 ? styles.disabled : styles.active}>
@@ -49,7 +51,7 @@ export const Feed = ({ pageNumber, articles }) => {
 };
 
 export const getServerSideProps = async pageContext => {
-    const pageNumber = pageContext.query.slug;
+    const pageNumber = pageContext.query.entertainmentFeed;
 
     if(!pageNumber || pageNumber < 1 || pageNumber > 5){
         return{
@@ -60,7 +62,7 @@ export const getServerSideProps = async pageContext => {
         }
     }
     const apiResponse = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=us&category=general&pageSize=7&page=${pageNumber}`,
+        `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&pageSize=7&page=${pageNumber}`,
         {
             headers: {
                 Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`
@@ -81,4 +83,4 @@ export const getServerSideProps = async pageContext => {
     }
 };
 
-export default Feed;
+export default EntertainmentFeed;
