@@ -71,10 +71,10 @@ export const getServerSideProps = async pageContext => {
     const apiJson = await apiResponse.json()
 
     const {articles} = apiJson;
-
+    console.log(articles);
     return {
         props: {
-            articles,
+            articles : articles | null,
             pageNumber: Number.parseInt(pageNumber),
         }
     }

@@ -1,11 +1,42 @@
-.main {
-    flex:1;
+.main{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 80px;
+    
+    justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-
 .main h1{
     margin-top: -50px;
+}
+.post {
+    width: 250px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    height: max-content;
+   
+}
+.post img {
+    width: 100%;
+}
+.post h1{
+    font-family: 'Lora', serif;
+    cursor: pointer;
+    text-align: center;
+}
+.desc{
+    font-family: 'Noticia Text', serif;
+}
+.author{
+    font-family: 'Noticia Text', serif;
+    text-align: right;
+    font-weight: bold;
+font-style: italic;
+color: #484849;
+}
+.sourceName{
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    font-weight: bold;
+color: #484849;
 }
