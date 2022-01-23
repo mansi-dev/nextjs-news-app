@@ -3,8 +3,7 @@ import { Toolbar } from '../components/toolbar';
 import styles from '../styles/Home.module.css'
 
 export default function Home({articlesUS, articlesCA, articlesIN}) {
-  console.log("US");
-  console.log(articlesUS);
+
   return(
     <div className='page-container'>
       <Toolbar/>

@@ -2,9 +2,8 @@ import styles from '../../styles/Feed.module.css';
 import {useRouter} from 'next/router';
 import { Toolbar } from '../../components/toolbar';
 
-export const Feed = ({ pageNumber, articles }) => {
-    console.log(articles);
-    console.log(pageNumber);
+export const Feed = ({ articles, pageNumber }) => {
+   
     const router = useRouter();
 
     return(
@@ -71,10 +70,9 @@ export const getServerSideProps = async pageContext => {
     const apiJson = await apiResponse.json()
 
     const {articles} = apiJson;
-    console.log(articles);
     return {
         props: {
-            articles : articles | null,
+            articles,
             pageNumber: Number.parseInt(pageNumber),
         }
     }
